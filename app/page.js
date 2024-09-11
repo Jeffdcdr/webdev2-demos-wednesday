@@ -3,6 +3,12 @@ export default function Page () {
     <div>
       <h1> Web Dev 2 Demos</h1>
       <p>Demos for Web Dev 2</p>
+      <p>page.js that is the root NOT in the folder</p>
+      <li>
+        <a href="/week-2">Week 2 Page - Old Format</a>        
+      </li>
+      {/* <li><Link href="/week-2">Week 2 Page - NEW Format </Link></li> */}
+      
     </div>
   );
 }
