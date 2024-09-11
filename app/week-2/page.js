@@ -15,8 +15,9 @@ export default function Page (){
             <p>These are demos for week  2</p>
             <p>Page that are in the Week-2 folder under App</p>
             <p>The sum of a + b is {a+b}.</p>
-            <p>
-                Go back to <Link href="/"> Home page</Link>
+            <p> 
+                {/* This is to go back to the home page link */}
+                Go back to <Link href="/"> Home page</Link> 
             </p>
             <p>
                 Go back to <Link href="/" className="underline">Home page</Link>
