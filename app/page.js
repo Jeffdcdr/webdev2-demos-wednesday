@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Page () {
   return (
     <div>
@@ -7,7 +9,9 @@ export default function Page () {
       <li>
         <a href="/week-2">Week 2 Page - Old Format</a>        
       </li>
-      {/* <li><Link href="/week-2">Week 2 Page - NEW Format </Link></li> */}
+      <li>
+      <Link href="week-2">Week 2 Page - NEW Format </Link>
+      </li>
       <li>
         <a href="/week-3">Week 3 Demo</a>        
       </li>
