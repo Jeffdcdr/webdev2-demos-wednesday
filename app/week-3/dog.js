@@ -4,8 +4,10 @@ export default function Dog({ name, breed, age, colour }) {
   // let {name, breed, age, colour} = props; #2
   return (
     <section className="my-2 ml-2">
-      <h2 className="text-lg text-lime-400">{name}</h2>
-      <p>Breed: {breed}</p>
+      <h2 className="font-bold text-2xl text-violet-800">{name}</h2>
+      <p>
+        <span className="font-bold">Breed:</span> {breed}
+      </p>
       <p>Age: {age}</p>
       <p>Colour: {colour}</p>
     </section>
