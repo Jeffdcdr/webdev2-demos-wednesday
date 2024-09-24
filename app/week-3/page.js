@@ -29,7 +29,7 @@ export default function Page() {
   return (
     // <main className="pl-4">
     <main className="m-4">
-      <h1 className="text-2xl font-italic">Dogs</h1>
+      <h1 className="text-4xl font-bold">Meet the Dogs</h1>
 
       <Dog
         name={dog1.name}
