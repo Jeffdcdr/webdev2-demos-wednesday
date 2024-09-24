@@ -8,6 +8,8 @@ export default function Dog({ name, breed, age, colour }) {
       <p>
         <span className="font-bold">Breed:</span> {breed}
       </p>
+      {/* Bolding the Breed word using span tag */}
+      {/* <p>Breed: {breed}</p> */} 
       <p>Age: {age}</p>
       <p>Colour: {colour}</p>
     </section>
