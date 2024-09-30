@@ -15,6 +15,12 @@ export default function Page() {
       <li>
         <a href="/week-3">Week 3 Demo</a>
       </li>
+      <li>
+        <a href="/week-4a">Week 4a The activity</a>
+      </li>
+      <li>
+        <a href="/week-4">Week 4 Demo</a>
+      </li>
     </div>
   );
 }

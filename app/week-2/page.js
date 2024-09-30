@@ -7,8 +7,7 @@ export default function Page (){
 
     return (
         <main>
-            <Heading/>            
-            <Heading/>            
+               
             <Heading/>
             <Heading></Heading>            
             <h1> Week 2 Demos</h1>

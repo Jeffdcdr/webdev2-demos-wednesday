@@ -1,6 +1,9 @@
+
+
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Page() {
   const [count, setCount] = useState(0);
@@ -8,6 +11,8 @@ export default function Page() {
   // TODO: Create a new state variable called 'isEnabled' with an initial value of false.
   const [isEnabled, setIsEnabled] = useState(false);
   // This variable will be used to control the enabled/disabled state of the increment button.
+
+  
 
   const increment = () => {
     setCount(count + 1);
@@ -21,6 +26,7 @@ export default function Page() {
 
   const reset = () => {
     setCount(0);
+    
   };
 
   return (
@@ -35,7 +41,16 @@ export default function Page() {
       <input type="checkbox" onChange={toggleEnabled} />
       Enable button
       <p>Current count: {count}</p>
-      <button onClick={reset}>Reset</button>
+      <button 
+      onClick={reset}
+      className= "bg-red-400 rounded m-2 p-2"
+      >
+      Reset
+      </button>
+      <p>
+      Go back to <Link href="/" className="underline">Home page</Link>
+      </p>
     </div>
+    
   );
 }
