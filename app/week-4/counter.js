@@ -1,12 +1,30 @@
+"use client";
+
+import { useState } from "react";   //importing useState from react 
+
 export default function Counter() {
-    return <div>Counter Component</div>;
-//   let count = 0;
-//   return (
-//     <main>
-//       <h1>Counter</h1>
-//       <p>Current Count: {count}</p>
-//       <button>Increment</button>
-//       <button>Decrement</button>
-//     </main>
-//   );
+    const [count, setCount] = useState(0);    
+    const increment = () => setCount(count + 1);
+
+    const [isClicked, setIscicked] = useState(false);
+    const reset = () => setCount(0);
+
+    return (
+        <div>
+            <p>Current count: {count}</p>
+            <button 
+            onClick={increment} className="bg-blue-600 hover:bg-blue-800 text-white w-20 rounded m-1 p-1"
+            >
+            Increment
+            </button>
+            <button
+            onClick={reset} className="bg-red-600 hover:bg-red-800 text-white w-20 rounded m-1 p-1"
+            >
+            Reset    
+            </button>
+        </div>
+        
+          
+
+    );
 }
