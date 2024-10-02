@@ -21,6 +21,9 @@ export default function Page() {
       <li>
         <a href="/week-4">Week 4 Demo</a>
       </li>
+      <li>
+        <a href="/week-5">Week 5 Demo</a>
+      </li>
     </div>
   );
 }
