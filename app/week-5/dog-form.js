@@ -36,6 +36,9 @@ export default function DogForm() {
         event.preventDefault();
         let dog = { name, breed, age };
         console.log(dog);
+        setName("");
+        setBreed("");
+        setAge(0);
     }
 
 
