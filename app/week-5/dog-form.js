@@ -1,5 +1,6 @@
 "use client"
 
+
 import { useState } from "react";
 
 export default function DogForm() {
@@ -18,6 +19,18 @@ export default function DogForm() {
         //replace all characters that are not A-Z or a-z with an empty string
         // /g is globally /s means is okay to have spaces, remove that and you cant
     };
+
+    const handleAgeChange = (event) => {
+        let age = event.target.value;
+        age = parseInt(age);
+        // if (isNaN(age)) {
+        //     age = 0;
+        // }
+        if (age < 0) {
+            age = 0;
+        }
+        setAge(age);
+    }
 
 
 
@@ -48,13 +61,13 @@ export default function DogForm() {
                 id="age"
                 type="number"
                 value={age}
-                onChange={(event) => setAge(event.target.value)}
+                onChange={(event) => handleAgeChange(event)}
                 className="border border-gray-400 m-2"
             />
         </form>   
         {/* OUTPUT HANDLERS     */}
         <div className="text-lg"> 
-            <p>Name: {name}</p>
+            <p>Name: {name.length >= 3 ? name : "Name too short"}</p>
             <p>Breed: {breed}</p>
             <p>Age: {age}</p>
         </div>
