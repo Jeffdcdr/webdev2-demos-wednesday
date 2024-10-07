@@ -7,8 +7,14 @@ export default function DogForm() {
     const [breed, setBreed] = useState("");
     const [age, setAge] = useState(0);
 
-    const handleNameChange = (event) => {
-        setName(event.target.value);
+    const handleNameChange = (event) => { // #1
+        // setName(event.target.value); // #1
+
+        // let name = event.target.value; //#2
+        // name = name.replace(/[^A-Za-z]/g, ""); //#2
+        // setName(name); // #2
+        
+        setName(event.target.value.replace(/[^A-Za-z]/g, "")); // #3
     };
 
 
