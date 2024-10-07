@@ -36,6 +36,11 @@ export default function DogForm() {
         event.preventDefault(); //comment this out and the form gets reloaded with no values
         let dog = { name, breed, age };
         console.log(dog);
+
+        //reset the form
+        setName("");
+        setBreed("");
+        setAge(0);
         
     }
 
