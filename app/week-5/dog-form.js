@@ -13,8 +13,10 @@ export default function DogForm() {
         // let name = event.target.value; //#2
         // name = name.replace(/[^A-Za-z]/g, ""); //#2
         // setName(name); // #2
-        
-        setName(event.target.value.replace(/[^A-Za-z]/g, "")); // #3
+
+        setName(event.target.value.replace(/[^A-Za-z\s]/g, "")); // #3
+        //replace all characters that are not A-Z or a-z with an empty string
+        // /g is globally /s means is okay to have spaces, remove that and you cant
     };
 
 
