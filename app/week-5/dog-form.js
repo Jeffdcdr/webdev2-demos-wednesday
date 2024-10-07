@@ -30,6 +30,12 @@ export default function DogForm() {
             age = 0;
         }
         setAge(age);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let dog = { name, breed, age };
+        console.log(dog);
     }
 
 
@@ -38,7 +44,12 @@ export default function DogForm() {
       //Name Handler
       <div className="m-2">
         <h2 className="text-2xl">Add a dog</h2>
-        <form className="m-2">
+        <form 
+        className="m-2"
+        onSubmit={(event) => handleSubmit(event)}
+        onEnter={(event) => handleSubmit(event)}
+        >
+        
           <label htmlFor="name"> Name: </label>
           <input
             id="name"
@@ -64,6 +75,13 @@ export default function DogForm() {
                 onChange={(event) => handleAgeChange(event)}
                 className="border border-gray-400 m-2"
             />
+            <input 
+            type="submit" 
+            value="Add dog"
+            className="bg-blue-600 hover:bg-blue-800 text-white w-20 rounded m-1 p-1"
+            
+            />
+            
         </form>   
         {/* OUTPUT HANDLERS     */}
         <div className="text-lg"> 
