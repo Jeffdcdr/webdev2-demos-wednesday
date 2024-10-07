@@ -11,19 +11,18 @@ export default function DogForm() {
         setName(event.target.value);
     }
 
-    return(
-        <div className="m-2">
-            <h2 className="text-2xl">Add a dog</h2>
-            <form className="m-24">
-                <label htmlFor="name"> Name: </label>
-                <input
-                id="name"
-                type="text"
-                value={name}
-                onChange={(event) => handleNameChange (event)}
-                />
-            </form>
-        </div>
-
+    return (
+      <div className="m-2">
+        <h2 className="text-2xl">Add a dog</h2>
+        <form className="m-24">
+          <label htmlFor="name"> Name: </label>
+          <input
+            id="name"
+            type="text"
+            value={name}
+            onChange={(event) => handleNameChange(event)}
+          />
+        </form>
+      </div>
     );
 }

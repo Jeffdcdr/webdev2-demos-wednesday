@@ -3,8 +3,8 @@ import DogForm from "./dog-form";
 
 export default function Page() {
     return (
-        <main>
-            <h1>Week 5 Controlled Components</h1>            
+        <main className="m-4">
+            <h1 className="text-4xl m-2 bold">Week 5 interactivity with forms</h1>            
             <DogForm/>
         </main>
     );
