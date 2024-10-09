@@ -14,7 +14,7 @@ export default function Page() {
     return (
       <main className="p-2">
         <h1 className="text-2xl font-semibold">
-          Week 6 interactivity with forms
+          Week 6 Demo
         </h1>
         <ul>
           {dogsJson.map((dog) => (
