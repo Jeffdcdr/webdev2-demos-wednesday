@@ -20,6 +20,11 @@ export default function DogForm() {
         // /g is globally /s means is okay to have spaces, remove that and you cant
     };
 
+    const handleBreedChange = (event) => {
+      let breed = event.target.value;
+      breed = breed.replace(/[^A-Za-z\s]/g, "");
+      setBreed(breed);
+
     const handleAgeChange = (event) => {
         let age = event.target.value;
         age = parseInt(age);
@@ -70,7 +75,8 @@ export default function DogForm() {
             id="breed"
             type="text"
             value={breed}
-            onChange={(event) => setBreed(event.target.value)} //Different way of handling the event
+            // onChange={(event) => handleBreedChange(event)} // This uses the function above
+            onChange={(event) => setBreed(event.target.value) } //Different way of handling the event
             className="border border-gray-400 m-2"
           />
             <label htmlFor="age"> Age: </label>
