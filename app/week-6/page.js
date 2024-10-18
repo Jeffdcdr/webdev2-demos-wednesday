@@ -21,7 +21,7 @@ export default function Page() {
 
   // FILTERING dogs
   dogs = dogs.filter((dog) => dog.name.length > 5); // filter dogs with name length > 5
-  
+
   const handleClick = (id) => {
     setSelectedDogId(id);
   };
@@ -29,10 +29,15 @@ export default function Page() {
   return (
     <main className="p-2">
       <h1 className="text-2xl font-semibold">Week 6 Demo</h1>
+      <p>Current Id: {selectedDogId}</p>
       <ul>
         {/* {dogsJson.map((dog) => (   #1 */}
         {dogs.map((dog) => (
-          <li key={dog.name} className="py-2 bg-slate-400 m-2" >
+          <li
+            key={dog.name}
+            className="py-2 bg-slate-400 m-2"
+            onClick={() => handleClick(dog.id)}
+          >
             <h2 className="text-lg font-semibold">{dog.name}</h2>
             <p className="text-sm">{dog.description}</p>
             <p>
