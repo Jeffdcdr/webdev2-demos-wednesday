@@ -23,6 +23,10 @@ export default function Page() {
   dogs = dogs.filter((dog) => dog.name.length > 5); // filter dogs with name length > 5
 
   const handleClick = (id) => {
+    if (selectedDogId === id) {
+      setSelectedDogId(-1);
+      return;
+    }
     setSelectedDogId(id);
   };
 
@@ -37,8 +41,14 @@ export default function Page() {
             key={dog.name}
             // className="py-2 bg-slate-400 m-2"
             className={`py-2 m-2 ${dog.id === selectedDogId ? "bg-slate-200" : "bg-slate-100"}`}
-            onClick={() => handleClick(dog.id)}
+            onClick={() => handleClick(dog.id)
+            // onClick={handleClick(dog.id)
+            }
           >
+            {/* Why do we use an arrow function?
+            The arrow function () => handleClick(dog.id) is necessary here because it delays the execution of handleClick until the click actually happens.
+            Without the arrow function, if we wrote onClick={handleClick(dog.id)}, it would run immediately when the component renders, instead of when the user clicks. */}
+            
             <h2 className="text-lg font-semibold">{dog.name}</h2>
             <p className="text-sm">{dog.description}</p>
             <p>
