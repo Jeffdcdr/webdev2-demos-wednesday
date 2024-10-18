@@ -35,7 +35,8 @@ export default function Page() {
         {dogs.map((dog) => (
           <li
             key={dog.name}
-            className="py-2 bg-slate-400 m-2"
+            // className="py-2 bg-slate-400 m-2"
+            className={`py-2 m-2 ${dog.id === selectedDogId ? "bg-slate-200" : "bg-slate-100"}`}
             onClick={() => handleClick(dog.id)}
           >
             <h2 className="text-lg font-semibold">{dog.name}</h2>
@@ -44,8 +45,8 @@ export default function Page() {
               <Image
                 src={dog.imageUrl}
                 alt={dog.name}
-                width={640}
-                height={480}
+                width={480}
+                height={360}
               />
             </p>
           </li>
