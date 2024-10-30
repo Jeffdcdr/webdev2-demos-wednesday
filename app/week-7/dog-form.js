@@ -2,7 +2,7 @@
 
 import { useState } from "react"; //importing useState from react
 
-export default function DogForm() {
+export default function DogForm({onAddDog}) {
     const [name, setName] = useState("");
     const [age, setAge] = useState(0);
     
@@ -10,7 +10,10 @@ export default function DogForm() {
         event.preventDefault();
         const newId = Math.floor(Math.random() * 1000000);
         const newDog = { id: newId, name: name, age: age };
-        console.log(newDog)
+        // console.log(newDog)
+        onAddDog(newDog);
+        setName("");
+        setAge(0);
     };
     
     return (
