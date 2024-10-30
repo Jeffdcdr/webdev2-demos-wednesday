@@ -1,4 +1,4 @@
-import dogData from "./dog-data.json";
+
 import Dog from "./dog.js";
 
 export default function DogList() {
