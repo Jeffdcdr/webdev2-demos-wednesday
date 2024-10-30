@@ -34,7 +34,8 @@ export default function DogForm() {
                         type="number"
                         id="age"
                         value={age}
-                        onChange={(event) => setAge(event.target.value)}
+                        // onChange={(event) => setAge(event.target.value)}
+                        onChange={(event) => setAge(parseInt(event.target.value))} //parseInt converts string to number before setting the state (setAge
                         className="text-black"
                     />
             </div>
