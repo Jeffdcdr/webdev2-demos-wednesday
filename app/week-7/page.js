@@ -1,5 +1,6 @@
 import Counter from "./counter";
 import DogList from "./dog-list";
+import DogForm from "./dog-form";
 
 export default function Page() {
   return (
@@ -8,6 +9,7 @@ export default function Page() {
       <div></div>
       <Counter />
       <DogList />
+      <DogForm  />
     </main>
   );
 }
