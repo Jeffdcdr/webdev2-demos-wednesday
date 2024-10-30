@@ -1,39 +1,38 @@
 [
-{
+  {
     "id": 1,
     "name": "Buddy",
     "age": 4
-},
-{
+  },
+  {
     "id": 2,
     "name": "Max",
     "age": 2
-},
-{
+  },
+  {
     "id": 3,
     "name": "Charlie",
     "age": 5
-},
-{
+  },
+  {
     "id": 4,
     "name": "Cooper",
     "age": 3
-},
+  },
 
-{
+  {
     "id": 5,
     "name": "Bailey",
     "age": 8
-},
-{
+  },
+  {
     "id": 6,
     "name": "Molly",
     "age": 9
-},
-{
+  },
+  {
     "id": 7,
     "name": "Stella",
     "age": 10
-}
-
+  }
 ]
