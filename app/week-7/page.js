@@ -1,4 +1,5 @@
 import Counter from "./counter";
+import DogList from "./dog-list";
 
 export default function Page() {
   return (
@@ -6,6 +7,7 @@ export default function Page() {
       <h1 className="text-2xl font-semibold"> Week 7 Demo </h1>
       <div></div>
       <Counter />
+      <DogList />
     </main>
   );
 }
