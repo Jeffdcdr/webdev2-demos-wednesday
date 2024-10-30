@@ -1,10 +1,13 @@
-export default function Dog({name, age}) {
+export default function Dog({ id, name, age, onDelete }) {
   return (
     <div>
-        {/* <h2>Dog List</h2> */}
-        <p>
-            {name} is {age} years old
-        </p>
+      {/* <h2>Dog List</h2> */}
+      <p>
+        {name} is {age} years old
+      </p>
+      <button onClick={() => onDelete(id)} className="text-red-500">
+        Delete
+      </button>
     </div>
   );
-}   
+}
