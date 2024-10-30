@@ -1,8 +1,9 @@
 export default function Dog({name, age}) {
   return (
     <div>
+        {/* <h2>Dog List</h2> */}
         <p>
-            Dog: {name} is {age} years old
+            {name} is {age} years old
         </p>
     </div>
   );
